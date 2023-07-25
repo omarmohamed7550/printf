@@ -57,6 +57,7 @@ int _printf(const char *format, ...)
 			{
 				handle_percent(buffer, &buff_ind, &count);
 			}
+		}
 
 	}
 	count += buff_ind;
