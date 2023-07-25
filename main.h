@@ -17,5 +17,4 @@ void print_buffer(char buffer[], int *buff_ind);
 void handle_character(char buffer[], int *buff_ind, int *count, char c);
 void handle_string(char buffer[], int *buff_ind, int *count, char *s);
 void handle_percent(char buffer[], int *buff_ind, int *count);
-void handle_integer(char buffer[], int *buff_ind, int *count, int num);
 #endif

@@ -31,6 +31,7 @@ int _printf(const char *format, ...)
 			{
 				print_buffer(buffer, &buff_ind);
 			}
+			write(1, &format[i], 1);
 			count++;
 		}
 		else
@@ -56,17 +57,10 @@ int _printf(const char *format, ...)
 			{
 				handle_percent(buffer, &buff_ind, &count);
 			}
-			else if (format[i] == 'd' || format[i] == 'i')
-			{
-				int num = va_arg(ptr, int);
 
-				handle_integer(buffer, &buff_ind, &count, num);
-			}
-		}
 	}
 	count += buff_ind;
 	va_end(ptr);
-	print_buffer(buffer, &buff_ind);
 	return (count);
 }
 
