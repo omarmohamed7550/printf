@@ -64,6 +64,7 @@ int _printf(const char *format, ...)
 			}
 		}
 	}
+	count += buff_ind;
 	va_end(ptr);
 	print_buffer(buffer, &buff_ind);
 	return (count);

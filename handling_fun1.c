@@ -30,17 +30,17 @@ void handle_character(char buffer[], int *buff_ind, int *count, char c)
 
 void handle_string(char buffer[], int *buff_ind, int *count, char *s)
 {
-	int j;
+    int j;
 
-	for (j = 0; s[j] != '\0'; j++)
-	{
-		buffer[(*buff_ind)++] = s[j];
-		if (*buff_ind == BUFF_SIZE)
-		{
-			print_buffer(buffer, buff_ind);
-		}
-		(*count)++;
-	}
+    for (j = 0; s[j] != '\0'; j++)
+    {
+        if (*buff_ind == BUFF_SIZE)
+        {
+            print_buffer(buffer, buff_ind);
+        }
+        buffer[(*buff_ind)++] = s[j];
+        (*count)++;
+    }
 }
 
 /**
