@@ -46,6 +46,10 @@ int _printf(const char *format, ...)
 			{
 				char *s = va_arg(ptr, char*);
 
+				if (s == NULL)
+				{
+					return (-1);
+				}
 				handle_string(buffer, &buff_ind, &count, s);
 			}
 			else if (format[i] == '%')
