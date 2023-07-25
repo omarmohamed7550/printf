@@ -16,7 +16,6 @@ void handle_character(char buffer[], int *buff_ind, int *count, char c)
 	{
 		print_buffer(buffer, buff_ind);
 	}
-	write(1, &c, 1);
 	(*count)++;
 }
 
@@ -40,7 +39,6 @@ void handle_string(char buffer[], int *buff_ind, int *count, char *s)
 		{
 			print_buffer(buffer, buff_ind);
 		}
-		write(1, &s[j], 1);
 		(*count)++;
 	}
 }
@@ -62,7 +60,6 @@ void handle_percent(char buffer[], int *buff_ind, int *count)
 	{
 		print_buffer(buffer, buff_ind);
 	}
-	write(1, &perc, 1);
 	(*count)++;
 }
 
@@ -87,7 +84,6 @@ void handle_integer(char buffer[], int *buff_ind, int *count, int num)
 		{
 			print_buffer(buffer, buff_ind);
 		}
-		write(1, "0", 1);
 		(*count)++;
 	}
 	else if (num < 0)
@@ -98,7 +94,6 @@ void handle_integer(char buffer[], int *buff_ind, int *count, int num)
 		{
 			print_buffer(buffer, buff_ind);
 		}
-		write(1, "-", 1);
 		(*count)++;
 	}
 	while (num > 0)
@@ -114,7 +109,6 @@ void handle_integer(char buffer[], int *buff_ind, int *count, int num)
 		{
 			print_buffer(buffer, buff_ind);
 		}
-		write(1, &num_str[j], 1);
 		(*count)++;
 	}
 }

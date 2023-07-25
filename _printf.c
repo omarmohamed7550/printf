@@ -31,7 +31,6 @@ int _printf(const char *format, ...)
 			{
 				print_buffer(buffer, &buff_ind);
 			}
-			write(1, &format[i], 1);
 			count++;
 		}
 		else
@@ -62,6 +61,7 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(ptr);
+	print_buffer(buffer, &buff_ind);
 	return (count);
 }
 
