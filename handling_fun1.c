@@ -15,7 +15,7 @@ void handle_character(char buffer[], int *buff_ind, int *count, char c)
 	{
 		print_buffer(buffer, buff_ind);
 	}
-	write(1,&c,1);
+	write(1, &c, 1);
 	(*count)++;
 }
 
@@ -30,17 +30,17 @@ void handle_character(char buffer[], int *buff_ind, int *count, char c)
 
 void handle_string(char buffer[], int *buff_ind, int *count, char *s)
 {
-    int j;
+	int j;
 
-    for (j = 0; s[j] != '\0'; j++)
-    {
-        if (*buff_ind == BUFF_SIZE)
-        {
-            print_buffer(buffer, buff_ind);
-        }
-	write(1,&s[j],1);
-        (*count)++;
-    }
+	for (j = 0; s[j] != '\0'; j++)
+	{
+		if (*buff_ind == BUFF_SIZE)
+		{
+			print_buffer(buffer, buff_ind);
+		}
+	write(1, &s[j], 1);
+	(*count)++;
+	}
 }
 
 /**
@@ -59,6 +59,6 @@ void handle_percent(char buffer[], int *buff_ind, int *count)
 	{
 		print_buffer(buffer, buff_ind);
 	}
-	write(1,&perc,1);
+	write(1, &perc, 1);
 	(*count)++;
 }
